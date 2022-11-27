@@ -30,6 +30,10 @@ public class GameManager : MonoBehaviour
     public void UpdateScore(int scoreDelta)
     {
         score += scoreDelta;
+        if(score < 0)
+        {
+            score = 0;
+        }
         scoreText.text = "Score: " + score;
     }
 }
